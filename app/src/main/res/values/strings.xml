@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BS</string>
+    <string name="login_window">Logowanie</string>
+    <string name="action_settings">Settings</string>
+    <string name="tb_login">Login</string>
+    <string name="pb_password">Hasło</string>
+    <string name="btn_loginAction">Zaloguj się</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_admin">Administrator</string>
+    <string name="title_activity_admin_users">AdminUsers</string>
+    <string name="title_activity_admin_events">AdminEvents</string>
+    <string name="title_activity_admin_plan">AdminPlan</string>
+    <string name="title_activity_admin_camera">AdminCamera</string>
+    <string name="tabhost_admin_users">Pracownicy</string>
+    <string name="tabhost_admin_events">Zdarzenia</string>
+    <string name="tabhost_admin_plan">Plan dnia</string>
+    <string name="tabhost_admin_camera">Widok kamery</string>
+    <string name="tab_host_add">Dodaj użytkownika</string>
+    <string name="tab_host_remove">Usuń</string>
+    <string name="tab_host_edit">Edytuj</string>
+    <string name="dialog_user_title">Dodawanie użytkownika.</string>
+    <string name="dialog_user_ok">Dodaj</string>
+    <string name="dialog_user_remove">Cofnij</string>
+    <string name="action_add_user">Dodaj pracownika</string>
+    <string name="hint_password">wprowadź hasło</string>
+    <string name="hint_password_repeat">powtórz hasło</string>
+    <string name="hint_login">wprowadź login</string>
+    <string name="title_activity_user_registration">Zarejestruj</string>
+    <string name="btn_registration">Rejestruj</string>
+    <string name="tv_registration_name">Obecne imię</string>
+    <string name="tv_registration_surname">Obecne nazwisko</string>
+    <string name="tv_registration_position">Obecne stanowisko</string>
+    <string name="data_loading">Wczytywanie ...</string>
+    <string name="data_register">Rejestracja ...</string>
+    <string name="datas_complete">Poprawnie zarejestrowano pracownika</string>
+    <string name="title_activity_employee">BS</string>
+    <string name="action_mail">Wiadomości</string>
+    <string name="title_activity_send_message">BS</string>
+    <string name="message_hint">Wprowadź tekst wiadomości</string>
+    <string name="message_btn">Wyśli wiadomość</string>
+    <string name="message_sending">Trwa wysyłanie wiadomości ...</string>
+    <string name="message_success">Pomyślnie wysłano wiadomość</string>
+    <string name="title_activity_event_registration">BS</string>
+    <string name="login_wrong_datas">Podano błędny login lub hasło !!!</string>
+    <string name="btn_start">Pr start</string>
+    <string name="btn_end">Pr koniec</string>
+    <string name="tv_title">Ostatnie zdarzenie</string>
+    <string name="tv_etype">Typ zdarzenia</string>
+    <string name="tv_etime">Czas zdarzenia</string>
+    <string name="tv_elocation">Lokalizacja</string>
+    <string name="title_activity_report">Raport</string>
+    <string name="title_activity_report_detail">Szczegóły raportu</string>
+    <string name="title_activity_trip_info">BS</string>
+    <string name="btn_send_sms">Wyśli smsa</string>
+    <string name="title_activity_smssettings">BS</string>
+
+</resources>

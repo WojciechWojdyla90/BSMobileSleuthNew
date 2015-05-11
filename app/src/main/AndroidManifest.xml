@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Biosys.bsmobilesleuth"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/indeks"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".UserRegistrationActivity"
+            android:label="@string/title_activity_user_registration"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.UserRegistrationActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EmployeeActivity"
+            android:label="@string/title_activity_employee"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.EmployeeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SendMessageActivity"
+            android:label="@string/title_activity_send_message"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.SendMessageActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EventRegistrationActivity"
+            android:label="@string/title_activity_event_registration"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.EventRegistrationActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/title_activity_report"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.ReportActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReportDetailActivity"
+            android:label="@string/title_activity_report_detail"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.ReportDetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TripInfoActivity"
+            android:label="@string/title_activity_trip_info"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.TripInfoActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SMSSettingsActivity"
+            android:label="@string/title_activity_smssettings"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.Biosys.bsmobilesleuth.SMSSettingsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\libs\jaque-1.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="33e2d67832fe5f9d17a4fb8065af2278c065de65">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\jaque-1.5-cd8a967ccafe86a714e5afa94d927a8094956e7e.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\libs\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="00b3081e1074bf380cc1d09d6ef4f8e5415311f2">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-12e3d148702fa4cd338d2955f1d5cc90215517fe.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\library-2.4.0-fe44513b6b37b9c3816f1fe5c4fdbaf7e06a0313.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-4e964bd93636f9bb1a905b50eeb0190ace8fb0f4.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\libs\ksoap2-android-assembly-2.5.8-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d6e6d14301616c866b7eff210ece6579299417ec">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-2.5.8-jar-with-dependencies-6e869afb542e831038f69fe234fc2bce944ba4e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\libs\reflections-0.9.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="76426b349db94e12e54a177d299791ac1355b1e7">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\reflections-0.9.5-8c5b0dde2087ff62aeb11d42a75d5406678299a9.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\libs\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e45246f4a068cad94e03f34bf8f24358279a7f7">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48-1c18aaecdffadea5c97874a7839f5b093df1c028.jar" />
+    </item>
+    <item
+        jar="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\exploded-aar\com.wrapp.floatlabelededittext\library\0.0.6\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0db8e1dc3097c0db8425b339e5e720ef6e918400">
+        <dex dex="C:\Users\wojdy_000\AndroidStudioProjects\BSMobileSleuth\app\build\intermediates\pre-dexed\debug\classes-7918b7f22c035ee44bf46def064e6985c225167d.jar" />
+    </item>
+
+</items>

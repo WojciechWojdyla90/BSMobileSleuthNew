@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+    <item
+        android:id="@+id/action_to_trip_info"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_mail"/>
+    
+    
+    <item
+        android:id="@+id/action_to_send_mail"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_mail"/>
+    
+    <item
+        android:id="@+id/action_to_user_report"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_mail"/>
+    
+    <item
+        android:id="@+id/action_to_event_registration"
+        android:icon="@android:drawable/ic_menu_save"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_mail"/>
+
+</menu>
