@@ -153,36 +153,6 @@ public class RestAPI {
         return result;
     }
 
-    public JSONObject GetAllUserMessage(int userId) throws Exception {
-        JSONObject result = null;
-        JSONObject o = new JSONObject();
-        JSONObject p = new JSONObject();
-        o.put("interface","RestAPI");
-        o.put("method", "GetAllUserMessage");
-        p.put("userId",mapObject(userId));
-        o.put("parameters", p);
-        String s = o.toString();
-        String r = load(s);
-        result = new JSONObject(r);
-        return result;
-    }
-
-    public JSONObject SendMessage(int senderID,int reciverId,String content) throws Exception {
-        JSONObject result = null;
-        JSONObject o = new JSONObject();
-        JSONObject p = new JSONObject();
-        o.put("interface","RestAPI");
-        o.put("method", "SendMessage");
-        p.put("senderID",mapObject(senderID));
-        p.put("reciverId",mapObject(reciverId));
-        p.put("content",mapObject(content));
-        o.put("parameters", p);
-        String s = o.toString();
-        String r = load(s);
-        result = new JSONObject(r);
-        return result;
-    }
-    
     public JSONObject GetAllUserEvents(int userId) throws Exception {
         JSONObject result = null;
         JSONObject o = new JSONObject();
@@ -238,6 +208,192 @@ public class RestAPI {
         o.put("method", "InsertTrip");
         p.put("userID",mapObject(userID));
         p.put("name",mapObject(name));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject RelesaeUser(int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "RelesaeUser");
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject SetUserPosition(int userId,int position) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "SetUserPosition");
+        p.put("userId",mapObject(userId));
+        p.put("position",mapObject(position));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject RemoveTrip(int tripId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "RemoveTrip");
+        p.put("tripId",mapObject(tripId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject SendMessage(int convId,int senderID,String content) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "SendMessage");
+        p.put("convId",mapObject(convId));
+        p.put("senderID",mapObject(senderID));
+        p.put("content",mapObject(content));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject GetUserMessages(int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "GetUserMessages");
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject GetUserConversations(int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "GetUserConversations");
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject GetLastConversation() throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "GetLastConversation");
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject RemoveConversation(int convId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "RemoveConversation");
+        p.put("convId",mapObject(convId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject GetUserConversationMembers(int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "GetUserConversationMembers");
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject GetRodeInfos(int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "GetRodeInfos");
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject InsertMember(int convId,int userId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "InsertMember");
+        p.put("convId",mapObject(convId));
+        p.put("userId",mapObject(userId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject InsertRodeInfo(int userId,int messageId) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "InsertRodeInfo");
+        p.put("userId",mapObject(userId));
+        p.put("messageId",mapObject(messageId));
+        o.put("parameters", p);
+        String s = o.toString();
+        String r = load(s);
+        result = new JSONObject(r);
+        return result;
+    }
+
+    public JSONObject InsertConversation(String topic) throws Exception {
+        JSONObject result = null;
+        JSONObject o = new JSONObject();
+        JSONObject p = new JSONObject();
+        o.put("interface","RestAPI");
+        o.put("method", "InsertConversation");
+        p.put("topic",mapObject(topic));
         o.put("parameters", p);
         String s = o.toString();
         String r = load(s);

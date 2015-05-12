@@ -7,7 +7,7 @@ public class BSMessage {
 	int reciverId;
 	String content;
 	String date;
-	
+
 	public int getId() {
 		return id;
 	}
@@ -63,7 +63,7 @@ public class BSMessage {
 		content = "";
 		date = "";
 	}
-	
+
 	public BSMessage(int _id, int _sender, int _reciver, String _content, String  _date){
 		id = _id;
 		senderId = _sender;

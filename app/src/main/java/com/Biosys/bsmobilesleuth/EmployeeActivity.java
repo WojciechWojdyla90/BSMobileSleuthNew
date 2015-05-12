@@ -93,7 +93,7 @@ public class EmployeeActivity extends Activity {
 				Session.setUsers(serviceChannel.GetAllBSUsers());
 				Session.setTrips(serviceChannel.GetBSUserTrips(userId));
 				Session.setEvents(serviceChannel.GetBSUserEvents(userId));
-				return serviceChannel.GetBSUserMessages(userId);
+				return null;//serviceChannel.GetBSUserMessages(userId);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				String message = e.getMessage();

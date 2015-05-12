@@ -42,20 +42,20 @@ public class RestServiceChannnel implements IServiceChannel {
 		return parser.parseUser(api.GetAllUsers());
 	}
 
-	@Override
-	public ArrayList<BSMessage> GetBSUserMessages(int userId) throws Exception {
-		RestAPI api = new RestAPI();
-		JSONParser parser = new JSONParser();
-		return parser.parseMessages(api.GetAllUserMessage(userId));
-	}
+	//@Override
+	//public ArrayList<BSMessage> GetBSUserMessages(int userId) throws Exception {
+	//	RestAPI api = new RestAPI();
+	//	JSONParser parser = new JSONParser();
+	//	return parser.parseMessages(api.GetAllUserMessage(userId));
+	//}
 
-	@Override
-	public Boolean SendMessage(int sender, int reciver, String content)
-			throws Exception {
-		RestAPI api = new RestAPI();
-		api.SendMessage(sender, reciver, content);
-		return true;
-	}
+	//@Override
+	//public Boolean SendMessage(int sender, int reciver, String content)
+	//		throws Exception {
+	//	RestAPI api = new RestAPI();
+	//	api.SendMessage(sender, reciver, content);
+	//	return true;
+	//}
 
 	@Override
 	public ArrayList<BSTrip> GetBSUserTrips(int userId) throws Exception {

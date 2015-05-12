@@ -137,10 +137,10 @@ public class SendMessageActivity extends Activity implements OnItemSelectedListe
 			try {
 				//userAuth = true;//serviceChannel.UserAuthorize(params[0].toString(), params[1].toString());
 				
-				Boolean res = serviceChannel.SendMessage(Integer.parseInt(params[0].toString()),
-						Integer.parseInt(params[1].toString()), params[2].toString());
+				//Boolean res = serviceChannel.SendMessage(Integer.parseInt(params[0].toString()),
+				//		Integer.parseInt(params[1].toString()), params[2].toString());
 	        	
-	        	return res;
+	        	return true;
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				String message = e.getMessage();
