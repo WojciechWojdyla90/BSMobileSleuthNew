@@ -8,6 +8,15 @@ import java.util.ArrayList;
 public class ConversationFull {
     ArrayList<MessageFull> messages;
     ArrayList<MemberFull> members;
+    BSConversation conversation;
+
+    public BSConversation getConversation() {
+        return conversation;
+    }
+
+    public void setConversation(BSConversation conversation) {
+        this.conversation = conversation;
+    }
 
     public ArrayList<MessageFull> getMessages() {
         return messages;
@@ -27,7 +36,8 @@ public class ConversationFull {
 
     public ConversationFull(){}
 
-    public ConversationFull(ArrayList<MessageFull> _messages,ArrayList<MemberFull> _members){
+    public ConversationFull(ArrayList<MessageFull> _messages,ArrayList<MemberFull> _members, BSConversation bsConversation){
+        this.conversation = bsConversation;
         this.messages = _messages;
         this.members = _members;
     }

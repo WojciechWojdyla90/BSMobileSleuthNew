@@ -107,6 +107,6 @@ public class SMSSettingsActivity extends Activity implements OnItemSelectedListe
 		
 		ed.commit();
 
-		Toast.makeText(this, "Dane zosta≥y zapisane", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "Dane zosta≈Çy zapisane", Toast.LENGTH_LONG).show();
 	}
 }

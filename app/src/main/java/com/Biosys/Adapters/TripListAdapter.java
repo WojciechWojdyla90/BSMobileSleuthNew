@@ -39,7 +39,7 @@ public class TripListAdapter extends ArrayAdapter<BSEvent>{
 	    BSEvent ev = this._objects[position];
 	    
 	    if(ev.getChecktype() == 0){
-	    	textViewType.setText("Pr pocz¹tek");
+	    	textViewType.setText("Pr poczÄ…tek");
 	    	textViewType.setTextColor(Color.GREEN);
 	    }else{
 	    	textViewType.setText("Pr koniec");

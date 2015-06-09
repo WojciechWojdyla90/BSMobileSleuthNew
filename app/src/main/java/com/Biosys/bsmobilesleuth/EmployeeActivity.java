@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import org.json.JSONObject;
 
 import com.Biosys.Adapters.MessageListAdapter;
+import com.Biosys.Controlers.ConversationsControler;
 import com.Biosys.Controlers.Session;
 import com.Biosys.Naming.BSMessage;
 import com.Biosys.Naming.BSUser;
+import com.Biosys.Naming.ConversationFull;
 import com.Biosys.WebserviceComunication.IServiceChannel;
 import com.Biosys.WebserviceComunication.RestServiceChannnel;
 
@@ -20,20 +22,22 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class EmployeeActivity extends Activity {
 
 	Context context; 
-	ArrayList<BSMessage> messages;
+	ArrayList<ConversationFull> conversationFulls;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_employee);
 		context = this;
-		new AsyncGetUserMessages().execute();
+		new AsyncGetUserConversations().execute();
 	}
 
 	@Override
@@ -79,21 +83,27 @@ public class EmployeeActivity extends Activity {
     	return super.onOptionsItemSelected(item);
     }
 	
-	private class AsyncGetUserMessages extends AsyncTask<String, JSONObject, ArrayList<BSMessage>> {
+	private class AsyncGetUserConversations extends AsyncTask<String, JSONObject, ArrayList<ConversationFull>> {
 		ProgressDialog progDailog;
         //String userName=null;
         @Override
-        protected ArrayList<BSMessage> doInBackground(String... params) {
+        protected ArrayList<ConversationFull> doInBackground(String... params) {
         	  IServiceChannel serviceChannel = new RestServiceChannnel();
         	 // boolean userAuth;
 			try {
 				//userAuth = true;//serviceChannel.UserAuthorize(params[0].toString(), params[1].toString());
 				SharedPreferences sp = context.getSharedPreferences("com.biosys.mobilesleuth", Context.MODE_PRIVATE);
 			    int userId = sp.getInt("string.userId", 1);
-				Session.setUsers(serviceChannel.GetAllBSUsers());
 				Session.setTrips(serviceChannel.GetBSUserTrips(userId));
 				Session.setEvents(serviceChannel.GetBSUserEvents(userId));
-				return null;//serviceChannel.GetBSUserMessages(userId);
+                Session.setUsers(serviceChannel.GetAllBSUsers());
+                ConversationsControler controler = new ConversationsControler(userId);
+                controler.createConversationsDatas(Session.getUsers(),serviceChannel.GetBSUserConversations(userId),serviceChannel.GetBSMobileMessages(userId),
+                        serviceChannel.GetBSConversationMembers(userId),serviceChannel.GetBSRodeInfos(userId));
+
+                Session.setControler(controler);
+
+				return controler.getConversations();//serviceChannel.GetBSUserMessages(userId);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				String message = e.getMessage();
@@ -112,21 +122,46 @@ public class EmployeeActivity extends Activity {
             	}
 
         @Override
-        protected void onPostExecute(ArrayList<BSMessage> result) {
+        protected void onPostExecute(ArrayList<ConversationFull> result) {
         	
         	final ListView listview = (ListView) findViewById(R.id.messageListView);
-        	messages = result;
-        	
-        	BSMessage[] msgs= new  BSMessage[messages.size()];
-        	msgs = messages.toArray(msgs);
-        	
-        	final MessageListAdapter  adapter = new MessageListAdapter(context, R.layout.message_list_row, msgs);
+            conversationFulls = result;
+
+            ConversationFull[] fulls= new  ConversationFull[conversationFulls.size()];
+            fulls = conversationFulls.toArray(fulls);
+
+        	final MessageListAdapter  adapter = new MessageListAdapter(context, R.layout.message_list_row, fulls);
         	
         	listview.setAdapter(adapter);
-        	
+            listview.setClickable(true);
+
+            listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+                    SharedPreferences sp = getSharedPreferences(
+                            "com.biosys.mobilesleuth", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor ed = sp.edit();
+
+                    ed.putInt("string.convPosition", position);
+                    ed.commit();
+
+                    Intent intentAdmin = new Intent(
+                            "com.Biosys.bsmobilesleuth.ConcreateConversation");
+                    startActivity(intentAdmin);
+                    //Toast.makeText(context, getResources().getString(R.string.refresh_info), Toast.LENGTH_LONG).show();
+                }
+            });
+
         	if(progDailog.isShowing())
         			progDailog.dismiss();
 		}
 
         }
+
+    public void onRefresh(View v) {
+        new AsyncGetUserConversations().execute();
+        Toast.makeText(this, getResources().getString(R.string.refresh_info), Toast.LENGTH_LONG).show();
+    }
 }

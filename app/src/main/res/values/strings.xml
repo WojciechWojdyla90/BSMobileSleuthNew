@@ -38,7 +38,7 @@
     <string name="title_activity_employee">BS</string>
     <string name="action_mail">Wiadomości</string>
     <string name="title_activity_send_message">BS</string>
-    <string name="message_hint">Wprowadź tekst wiadomości</string>
+    <string name="message_hint">Wprowadź tytuł rozmowy</string>
     <string name="message_btn">Wyśli wiadomość</string>
     <string name="message_sending">Trwa wysyłanie wiadomości ...</string>
     <string name="message_success">Pomyślnie wysłano wiadomość</string>
@@ -56,4 +56,7 @@
     <string name="btn_send_sms">Wyśli smsa</string>
     <string name="title_activity_smssettings">BS</string>
 
+    <string name="refresh_info">Odświeżono widok wiadomości</string>
+    <string name="title_activity_concreate_conversation">Podgląd rozmowy</string>
+    <string name="title_activity_concreate_end">Przeczytano rozmowę</string>
 </resources>

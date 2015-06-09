@@ -40,7 +40,7 @@ public class TripInfoActivity extends Activity implements OnItemSelectedListener
 		spinner = (Spinner) findViewById(R.id.spnTrip);
 		
     	for(BSTrip trip : Session.getTrips()){
-    		String toDisplay = trip.getId()+" "+trip.getName();
+    		String toDisplay = trip.getName();
     		list.add(toDisplay);
     	}
     	
@@ -111,6 +111,6 @@ public class TripInfoActivity extends Activity implements OnItemSelectedListener
 	    SmsManager smsManager =     SmsManager.getDefault();
 	    smsManager.sendTextMessage(phone, null, content, null, null);
 	    
-	    Toast.makeText(this, "Wys³ano smsa", Toast.LENGTH_LONG).show();
+	    Toast.makeText(this, "Wysï¿½ano smsa", Toast.LENGTH_LONG).show();
 	}
 }

@@ -7,9 +7,13 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
+import com.Biosys.Naming.BSConversation;
+import com.Biosys.Naming.BSConversationMember;
 import com.Biosys.Naming.BSEvent;
 import com.Biosys.Naming.BSMessage;
+import com.Biosys.Naming.BSMobileMessage;
 import com.Biosys.Naming.BSPosition;
+import com.Biosys.Naming.BSRodeInfo;
 import com.Biosys.Naming.BSTrip;
 import com.Biosys.Naming.BSUser;
 
@@ -125,13 +129,121 @@ public class JSONParser {
 				toAdd.setLatitude(jsObject.getDouble("LATITUDE"));
 				toAdd.setTripId(jsObject.getInt("TRIP_ID"));
 				result.add(toAdd);
-				Log.d("JSONParser -> parseEvent", "i");
+				Log.d("JSONParser->parseEvent", "i");
 				
 			}
 		}catch(JSONException e){
-			Log.d("JSONParser -> parseEvent", e.getMessage());
+			Log.d("JSONParser->parseEvent", e.getMessage());
 		}
 		
 		return result;
 	}
+
+    public ArrayList<BSConversation> parseConversation(JSONObject object)
+    {
+        ArrayList<BSConversation> result = new ArrayList<BSConversation>();
+
+        try{
+            JSONArray jsArray = object.getJSONArray("Value");
+            JSONObject jsObject = null;
+
+            for(int i = 0; i < jsArray.length();i++)
+            {
+                jsObject = jsArray.getJSONObject(i);
+
+                BSConversation toAdd = new BSConversation();
+                toAdd.setId(jsObject.getInt("ID"));
+                toAdd.setTopic(jsObject.getString("TOPIC"));
+                result.add(toAdd);
+                Log.d("JSONParser->conv", "i");
+
+            }
+        }catch(JSONException e){
+            Log.d("JSONParser -> conv", e.getMessage());
+        }
+
+        return result;
+    }
+
+    public ArrayList<BSConversationMember> parseConversationMembers(JSONObject object)
+    {
+        ArrayList<BSConversationMember> result = new ArrayList<BSConversationMember>();
+
+        try{
+            JSONArray jsArray = object.getJSONArray("Value");
+            JSONObject jsObject = null;
+
+            for(int i = 0; i < jsArray.length();i++)
+            {
+                jsObject = jsArray.getJSONObject(i);
+
+                BSConversationMember toAdd = new BSConversationMember();
+                toAdd.setId(jsObject.getInt("ID"));
+                toAdd.setUserId(jsObject.getInt("USER_ID"));
+                toAdd.setConversationID(jsObject.getInt("CONVERSATION_ID"));
+                result.add(toAdd);
+                Log.d("JSONParser -> convMemb", "i");
+
+            }
+        }catch(JSONException e){
+            Log.d("JSONParser -> convMemb", e.getMessage());
+        }
+
+        return result;
+    }
+
+    public ArrayList<BSMobileMessage> parseMobileMessage(JSONObject object)
+    {
+        ArrayList<BSMobileMessage> result = new ArrayList<BSMobileMessage>();
+
+        try{
+            JSONArray jsArray = object.getJSONArray("Value");
+            JSONObject jsObject = null;
+
+            for(int i = 0; i < jsArray.length();i++)
+            {
+                jsObject = jsArray.getJSONObject(i);
+
+                BSMobileMessage toAdd = new BSMobileMessage();
+                toAdd.setId(jsObject.getInt("ID"));
+                toAdd.setSenderId(jsObject.getInt("SENDER_ID"));
+                toAdd.setConversationId(jsObject.getInt("CONV_ID"));
+                toAdd.setContent(jsObject.getString("CONTENT"));
+                result.add(toAdd);
+                Log.d("JSONParser->parseMessWeb", "i");
+
+            }
+        }catch(JSONException e){
+            Log.d("JSONParser->parseMessWeb", e.getMessage());
+        }
+
+        return result;
+    }
+
+    public ArrayList<BSRodeInfo> parseRodeInfo(JSONObject object)
+    {
+        ArrayList<BSRodeInfo> result = new ArrayList<BSRodeInfo>();
+
+        try{
+            JSONArray jsArray = object.getJSONArray("Value");
+            JSONObject jsObject = null;
+
+            for(int i = 0; i < jsArray.length();i++)
+            {
+                jsObject = jsArray.getJSONObject(i);
+
+                BSRodeInfo toAdd = new BSRodeInfo();
+                toAdd.setId(jsObject.getInt("ID"));
+                toAdd.setUserId(jsObject.getInt("USER_ID"));
+                toAdd.setMessageId(jsObject.getInt("MESSAGE_ID"));
+                result.add(toAdd);
+                Log.d("JSONParser->parseEvent", "i");
+
+            }
+        }catch(JSONException e){
+            Log.d("JSONParser->parseEvent", e.getMessage());
+        }
+
+        return result;
+    }
 }

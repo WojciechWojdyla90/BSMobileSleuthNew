@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.json.JSONObject;
 
 import com.Biosys.Controlers.Session;
+import com.Biosys.Naming.BSConversation;
 import com.Biosys.Naming.BSUser;
 import com.Biosys.WebserviceComunication.IServiceChannel;
 import com.Biosys.WebserviceComunication.RestServiceChannnel;
@@ -139,7 +140,10 @@ public class SendMessageActivity extends Activity implements OnItemSelectedListe
 				
 				//Boolean res = serviceChannel.SendMessage(Integer.parseInt(params[0].toString()),
 				//		Integer.parseInt(params[1].toString()), params[2].toString());
-	        	
+	        	Boolean res = serviceChannel.InsertConversation(params[2].toString());
+                ArrayList<BSConversation>conversation = serviceChannel.GetLastConversation();
+                res = serviceChannel.InsertMember(conversation.get(0).getId(),Integer.parseInt(params[0].toString()));
+                res = serviceChannel.InsertMember(conversation.get(0).getId(),Integer.parseInt(params[1].toString()));
 	        	return true;
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

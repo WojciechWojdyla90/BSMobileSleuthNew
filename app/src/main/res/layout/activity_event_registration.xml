@@ -10,11 +10,12 @@
 
     <Button
         android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="190dp"
         android:layout_marginTop="16dp"
         android:textColor="@android:color/holo_green_light"
         android:text="@string/btn_start" 
@@ -22,19 +23,20 @@
 
     <Button
         android:id="@+id/btnEnd"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnStart"
         android:layout_alignBottom="@+id/btnStart"
         android:layout_alignParentRight="true"
         android:layout_marginRight="24dp"
+        android:layout_marginLeft="180dp"
         android:textColor="@android:color/holo_red_light"
         android:text="@string/btn_end"
         android:onClick="onRegisterEnd" />
 
     <Spinner
         android:id="@+id/spTrip"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnStart"
         android:layout_alignRight="@+id/btnEnd"
@@ -43,41 +45,45 @@
 
     <TextView
         android:id="@+id/tvEventType"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/spTrip"
         android:layout_below="@+id/spTrip"
         android:layout_marginTop="68dp"
+        android:gravity="center"
         android:text="@string/tv_etype"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/tvEventPlace"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvEventTime"
         android:layout_below="@+id/tvEventTime"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="@string/tv_elocation"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/tvEventTime"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvEventType"
         android:layout_below="@+id/tvEventType"
         android:layout_marginTop="24dp"
+        android:gravity="center"
         android:text="@string/tv_etime"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/tvMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/spTrip"
         android:layout_below="@+id/spTrip"
         android:layout_marginTop="21dp"
+        android:gravity="center"
         android:text="@string/tv_title"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

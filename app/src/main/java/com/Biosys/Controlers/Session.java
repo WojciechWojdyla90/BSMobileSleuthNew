@@ -12,8 +12,17 @@ public class Session {
 	private static ArrayList<BSTrip> _trips;
 	private static ArrayList<BSEvent> _events;
 	private static ArrayList<EventPair> _pairs;
-	
-	public static void setUsers(ArrayList<BSUser> users){
+	private static ConversationsControler controler;
+
+    public static ConversationsControler getControler() {
+        return controler;
+    }
+
+    public static void setControler(ConversationsControler controler) {
+        Session.controler = controler;
+    }
+
+    public static void setUsers(ArrayList<BSUser> users){
 		Session._users = users;
 	}
 	

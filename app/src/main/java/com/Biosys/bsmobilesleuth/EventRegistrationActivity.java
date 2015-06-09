@@ -86,7 +86,7 @@ public class EventRegistrationActivity extends OrmLiteBaseActivity<DatabaseHelpe
 	    	ArrayList<String> list = new ArrayList<String>();
 	    	
 	    	for(BSTrip trip : Session.getTrips()){
-	    		String toDisplay = trip.getId()+" "+trip.getName();
+	    		String toDisplay = trip.getName();
 	    		list.add(toDisplay);
 	    	}
 	    	
@@ -164,11 +164,11 @@ public class EventRegistrationActivity extends OrmLiteBaseActivity<DatabaseHelpe
 		if(charges.size() > 0){
 		Event first = charges.get(0);
 		
-		new AsyncSendEvent().execute(first.getChecktime(),Integer.toString(first.getChecktype()),Integer.toString(first.getUserId()),
-				Double.toString(first.getLongitiude()),Double.toString(first.getLatitude()),Integer.toString(first.getChecktype()));
+		new AsyncSendEvent().execute("",Integer.toString(first.getChecktype()),Integer.toString(first.getUserId()),
+				"","",Integer.toString(first.getTripId()));
 		}
 		else{
-			Toast.makeText(context, "Wszystkie zdarzenia wys≥ano", Toast.LENGTH_LONG).show();
+			Toast.makeText(context, "Wszystkie zdarzenia wys≈Çano", Toast.LENGTH_LONG).show();
 		}
 	}
 	
@@ -218,7 +218,7 @@ public class EventRegistrationActivity extends OrmLiteBaseActivity<DatabaseHelpe
         protected void onPreExecute() {
             //super.onPreExecute();
         			progDailog = new ProgressDialog(context);
-            		progDailog.setMessage("Trwa wysy≥anie zdarzeÒ ...");
+            		progDailog.setMessage("Trwa wysy≈Çanie zdarze≈Ñ ...");
             		progDailog.show();
             	}
 
@@ -233,7 +233,7 @@ public class EventRegistrationActivity extends OrmLiteBaseActivity<DatabaseHelpe
         	if(progDailog.isShowing())
         			progDailog.dismiss();
         	
-        	Toast.makeText(context, "Poprawnie wys≥ano zdarzenie", Toast.LENGTH_LONG).show();
+        	Toast.makeText(context, "Poprawnie wys≈Çano zdarzenie", Toast.LENGTH_LONG).show();
 		}
 		
         @Override
@@ -269,8 +269,8 @@ public class EventRegistrationActivity extends OrmLiteBaseActivity<DatabaseHelpe
 		if(tripId <2)
 			this.tripId = 2;
 		
-		longitiude = 50.060451;
-	    latitiude = 19.959456;
+		longitiude = 21.1;
+	    latitiude = 21.1;
 	}
 
 	@Override
